@@ -1,0 +1,49 @@
+## IMPORTAN los REQUERIMENTS a OTRO ENTORNOS
+
+$ pip install -r requirements/local.txt
+
+## Para ejecutarlo con esta config
+
+$ python manage.py runserver --settings=SistemaDiscusiones.settings.local 4321
+
+
+## PARA INSTALLAR LA CONEXION A LA DB DE POSTGRE
+
+$ sudo apt-get install libpq-dev python-dev
+
+
+## PARA INSTALLAR LA DB DE POSTGRE
+
+$ sudo apt-get install postgresql
+
+## PARA LEVANTAR LA DB DE POSTGRE
+
+
+## Para Sincronizar la DB de Postgresql
+
+$ python manage.py syncdb --settings=SistemaDiscusiones.settings.local
+
+
+
+$ sudo service postgresql start
+
+## Para crear un Nuevo Usuario en Postgres
+
+$ createuser cursodjango
+
+## Para crear un Nuevo DB en Postgres
+
+$ createdb Discusiones
+
+## Para ingresar a la DB
+
+postgresql $ psql Discusiones
+
+
+## Cambiar el Pass a un Usario de postgres
+
+Discusiones=# ALTER USER cursodjango WITH PASSWORD '123';
+
+## Como Instalar South - Admin de DB Postgres
+
+pip install south
